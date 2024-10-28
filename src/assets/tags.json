@@ -1,0 +1,10 @@
+[
+  {
+    "productId": 1,
+    "tags": [{ "id": "tag-1", "label": "Hot Item" }]
+  },
+  {
+    "productId": 2,
+    "tags": [{ "id": "tag-2", "label": "Discontinued" }]
+  }
+]
