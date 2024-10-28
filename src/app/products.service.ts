@@ -11,9 +11,10 @@ export class ProductService {
   getProducts() {
     return this.http.get<Product[]>('/assets/products.json').pipe(
       tap(() => console.log('Products fetched successfully')),
-      catchError(error => {
-        alert('Failed to fetch products');
-        return of([]);  // Doug Returns an empty Observable
+      catchError((error) => {
+        console.error('Error fetching products:', error); // Doug: Log the error to the console
+        alert('Failed to fetch products'); // Doug: Alert the user
+        return of([]); // Doug: Return an empty Observable
       })
     );
   }
